@@ -19,20 +19,21 @@
     }
     .hero {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      gap: 40px;
-      padding: 40px;
+      padding: 30px 20px;
     }
     .hero img {
-      width: 550px;
+      width: 100%;
+      max-width: 500px;
       height: auto;
       border-radius: 10px;
     }
     .menu {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
+      margin-top: 20px;
     }
     .menu a {
       text-decoration: none;
@@ -45,20 +46,22 @@
       color: #043e2c;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      width: 230px;
+      justify-content: center;
+      width: 100%;
+      max-width: 250px;
+      margin: auto;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
     }
     .menu a:hover {
       background-color: #d6f2e7;
     }
     .section {
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     .section h2 {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       position: relative;
     }
     .section h2::before {
@@ -70,29 +73,26 @@
       font-size: 36px;
     }
     #about p {
-      max-width: 800px;
-      margin: 0 auto 15px auto;
-      font-size: 20px;
-    }
-    .section p, .section li {
-      font-size: 18px;
-      margin-bottom: 10px;
+      max-width: 900px;
+      margin: 0 auto 15px;
+      font-size: 19px;
     }
     .products {
       display: flex;
-      justify-content: center;
-      gap: 40px;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
     .products img {
-      width: 250px;
+      width: 100%;
+      max-width: 250px;
       height: 200px;
       object-fit: cover;
       border-radius: 8px;
     }
     .review-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 30px;
       max-width: 900px;
       margin: auto;
@@ -118,6 +118,20 @@
     .contact strong {
       font-size: 22px;
     }
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px 40px;
+      }
+      .menu {
+        margin-top: 0;
+      }
+      .review-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -135,8 +149,8 @@
   <section id="products" class="section">
     <h2>Ürünlerimiz</h2>
     <div class="products">
-      <div><img src="airfile.jpg" alt="Airfile Kumaş"><p><strong>Airfile Kumaş</strong></p></div>
-      <div><img src="alcantara.jpg" alt="Alcantara Kumaş"><p><strong>Alcantara Kumaş</strong></p></div>
+      <div><img src="airfile.jpg" alt="Airfile Kumaş"><p><strong>Alcantara Kumaş</strong></p></div>
+      <div><img src="alcantara.jpg" alt="Alcantara Kumaş"><p><strong>Airfile Kumaş</strong></p></div>
       <div><img src="welsoft.jpg" alt="Welsoft Kumaş"><p><strong>Welsoft Kumaş</strong></p></div>
     </div>
   </section>
