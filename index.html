@@ -4,82 +4,157 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OMY Ticaret | Her Türlü Örme Kumaş</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f2f2f2;
-      color: #222;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #ecfaf3;
+      color: #09241c;
     }
-    header {
-      background: linear-gradient(to right, #4a00e0, #8e2de2);
-      color: white;
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 40px;
+    }
+    .hero img {
+      max-width: 500px;
+      border-radius: 10px;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .menu a {
+      text-decoration: none;
+      background-color: white;
+      border: 2px solid #cce9df;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #043e2c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+    .menu a:hover {
+      background-color: #d6f2e7;
+    }
+    .section {
       padding: 40px 20px;
       text-align: center;
     }
-    header h1 {
-      font-size: 28px;
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      position: relative;
     }
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    .section h2::before {
+      content: '✦';
+      margin-right: 8px;
+      color: #f68e5f;
     }
-    .container p {
+    .section p, .section li {
       font-size: 18px;
-      padding: 30px 20px 0 20px;
-      line-height: 1.7;
-      text-align: center;
+      margin-bottom: 10px;
     }
-    .container img {
-      display: block;
-      width: 90%;
-      max-width: 800px;
-      margin: 20px auto;
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .products img {
+      width: 250px;
+      height: auto;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
-    footer {
-      background-color: #444;
-      color: #eee;
-      text-align: center;
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .review {
+      background: #fff;
       padding: 20px;
-      font-size: 15px;
-      margin-top: 60px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      font-size: 16px;
     }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 22px;
-      }
-      .container p {
-        font-size: 16px;
-      }
+    .contact {
+      text-align: center;
+    }
+    .contact p {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .contact div {
+      margin-bottom: 15px;
+    }
+    .contact strong {
+      font-size: 22px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>OMY Ticaret | Her Türlü Örme Kumaş</h1>
-  </header>
+  <section class="hero">
+    <img src="hero.jpg" alt="OMY Kumaş">
+    <div class="menu">
+      <a href="#home">Ana Sayfa →</a>
+      <a href="#products">Ürünlerimiz →</a>
+      <a href="#about">Hakkımızda →</a>
+      <a href="#reviews">Müşteri Yorumları →</a>
+      <a href="#contact">İletişim →</a>
+    </div>
+  </section>
 
-  <div class="container">
-    <p><strong>OMY Ticaret;</strong> kaliteli ürün yelpazesi, hızlı tedarik zinciriyle ihtiyaçlarınıza yönelik çözüm partneriniz.</p>
+  <section id="products" class="section">
+    <h2>Ürünlerimiz</h2>
+    <div class="products">
+      <div><img src="airfile.jpg" alt="Airfile Kumaş"><p><strong>Airfile Kumaş</strong></p></div>
+      <div><img src="alcantara.jpg" alt="Alcantara Kumaş"><p><strong>Alcantara Kumaş</strong></p></div>
+      <div><img src="welsoft.jpg" alt="Welsoft Kumaş"><p><strong>Welsoft Kumaş</strong></p></div>
+    </div>
+  </section>
 
-    <img src="63d402ea6fc3c-63d402ea7bf4f.jpg" alt="Kumaş rulo 1">
-    <img src="Screenshot 2025-06-14 153910.png" alt="Kumaş rulo 2">
-    <img src="welsoft-kumas-nedir-21-blog.png" alt="Kumaş rulo 3">
-  </div>
+  <section id="about" class="section">
+    <h2>Hakkımızda</h2>
+    <p>OMY Ticaret; kaliteli ürün yelpazesi ve hızlı tedarik zinciriyle, müşterilerinin ihtiyaçlarına özel çözümler sunan güvenilir bir iş ortağıdır.<br>
+    İlk günden bu yana, gelişmelerle kendini sürekli yenileyen firmamız, yılların verdiği tecrübe ve uzman kadrosuyla kumaş alanında fark yaratmaktadır.</p>
+    <p>Ürünlerimiz, kalite, estetik ve dayanıklılığı bir arada sunma amacıyla, özenle seçilmekte; siz müşterilerimizin ihtiyacı olan ürünü en kısa sürede, en doğru şekilde temin edebilmek için hem üretim hem de lojistik süreçlerinde etkin çözümler geliştirmekteyiz.</p>
+    <p>OMY Ticaret olarak sadece mal alım-satımı değil; güven, istikrar ve memnuniyet inşa etme amacıyla yola çıkıyoruz.</p>
+    <p><strong>OMY Ticaret olarak, sadece kumaş değil; kalite, hız ve güven sunuyoruz.</strong></p>
+  </section>
 
-  <footer>
-    İletisim: info@omytic.com | +90 553 588 69 36
-  </footer>
+  <section id="reviews" class="section">
+    <h2>Müşteri Yorumları</h2>
+    <div class="review-grid">
+      <div class="review">"Yıllardır farklı yerlerden kumaş tedarik ettik ama OMY Ticaret kadar düzenli, ilgili ve kaliteli hizmet sunanına rastlamadık. Kargolarının hızı bizi çok etkiledi."<br><em>– Cansu D.</em></div>
+      <div class="review">"OMY Ticaret ile çalışmaya başladığımızdan beri temin süreçlerimiz hızlandı, kalite standardımız yükseldi. Tedarikte istikrar sağladık. Müşteri temsilcilerinden çok memnunuz."<br><em>– Recep B. K.</em></div>
+      <div class="review">"Siparişim zamanında ve eksiksiz geldi. Kumaş kalitesi gerçekten çok iyi. İlginiz ve emeğiniz için teşekkür ederim."<br><em>– Hakan Y.</em></div>
+      <div class="review">"İlk siparişi verirken açıkçası biraz tereddüt ettim. Ancak gelen kumaşın kalitesini görünce bütün endişem kayboldu. Hem telefonla hem de maille detaylı bilgilendirme yapılması bana güven verdi. Şimdi çevremdeki birkaç üretici arkadaşımı da yönlendirdim."<br><em>– Murat S.</em></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>İletişim</h2>
+    <p>Sipariş, Soru ve Önerileriniz için bize ulaşın.</p>
+    <div><strong>✉ info@omytic.com</strong></div>
+    <div><strong>☎ +90 553 588 69 36</strong></div>
+  </section>
 </body>
 </html>
